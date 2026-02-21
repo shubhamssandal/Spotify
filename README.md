@@ -86,26 +86,10 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 1. Find the top 3 most-viewed tracks for each artist using window functions.
 2. Write a query to find tracks where the liveness score is above the average.
 3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
-```sql
-WITH cte
-AS
-(SELECT 
-	album,
-	MAX(energy) as highest_energy,
-	MIN(energy) as lowest_energery
-FROM spotify
-GROUP BY 1
-)
-SELECT 
-	album,
-	highest_energy - lowest_energery as energy_diff
-FROM cte
-ORDER BY 2 DESC
-```
+
    
 
-
-Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
+Here’s an updated section for **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization.
 
 ---
 
